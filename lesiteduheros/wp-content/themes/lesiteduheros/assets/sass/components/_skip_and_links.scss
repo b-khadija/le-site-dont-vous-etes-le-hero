@@ -1,0 +1,83 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+/* Liens et Skip Link */
+
+  .skip_link a { 
+    border: 1px solid var(--brand-white);
+    border-radius: 2rem;
+    color: var(--brand-white);
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+
+}
+
+.links {
+  color: var(--brand-white);
+  text-decoration: underline;
+  font-weight: bold;
+      
+      &:hover {
+          color: var(--brand-tulip-tree);
+          text-transform:uppercase;
+          text-decoration: underline;
+      }
+  
+      &:focus {
+          color: var(--brand-tulip-tree);
+          text-transform:uppercase;
+          text-decoration: underline;
+          outline: 0.2rem dashed var(--brand-tulip-tree);
+          outline-offset: 1rem;
+      }
+}
+
+  .navigation_link {
+
+    display: block;
+    margin-right: 2rem;
+    font-size: 2rem;
+
+  }
+
+  @include mixins.mq(variables.$bp-desktop) {
+
+    .navigation_link {
+
+      display: inline-block;
+      margin-right: 2rem;
+      font-size: 2rem;
+    }
+
+  }
+
+  .navigation_link a {
+
+    color: var(--brand-white);
+
+    &:hover{
+      color: var(--brand-tulip-tree);
+      text-decoration: none;
+    }
+    &:focus {
+      color: var(--brand-tulip-tree);
+      text-decoration: underline;
+      outline: 0.2rem dashed var(--brand-tulip-tree);
+      outline-offset: 0.5rem; 
+    }
+  }
+
+  .plan_site_link {
+    color: var(--brand-white);
+  }
+
+  .search_link_title a{
+
+    color: var(--brand-white);
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      color: var(--brand-tulip-tree);
+    }   
+  }

@@ -1,0 +1,26 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+.archive_article_image {
+    
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+.archive_article {
+
+    width: 100%;
+    margin-right: 1rem;
+    margin-top: 3rem;
+    text-align: justify;
+  }
+  
+@include mixins.mq(variables.$bp-desktop) {
+
+  .archive_article {
+    display: inline-block;
+    width: calc(50% - 2rem);
+    vertical-align: top;
+  }
+}
