@@ -1,7 +1,0 @@
-@use "variables";
-
-@mixin mq($breakpoint: variables.$bp-desktop) {
-  @media screen and (min-width: ($breakpoint / 16)) {
-    @content;
-  }
-}
